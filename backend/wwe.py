@@ -93,7 +93,7 @@ def get_wrestlers():
 def get_wrestler(wrestler_id):
     """Get details of a specific wrestler."""
     if 0 <= wrestler_id < len(wrestlers):
-        return jsonify(wrestlers[wrestler_id].get_info())
+        return jsonify(wrestlers[wrestler_id].display_info())
     return jsonify({"error": "Wrestler not found"}), 404
 
 #Sim match
